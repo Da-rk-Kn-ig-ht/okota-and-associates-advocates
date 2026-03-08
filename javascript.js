@@ -1,5 +1,4 @@
-
-    // ── 1. HERO ANIMATIONS ──
+// ── 1. HERO ANIMATIONS ──
     window.addEventListener('load', () => {
       document.querySelector('.hero-eyebrow').classList.add('animate');
       document.querySelector('.hero h1').classList.add('animate');
@@ -102,7 +101,6 @@
       const ok = testFn(el.value.trim());
       el.classList.toggle('error', !ok);
       err.classList.toggle('show', !ok);
-      // Attach live-clear listener only once via data attribute flag
       if (!el.dataset.listenerAttached) {
         el.dataset.listenerAttached = 'true';
         el.addEventListener('input', () => {
@@ -116,34 +114,34 @@
     }
 
     document.getElementById('formSubmit')?.addEventListener('click', () => {
-      const v1 = validateField('firstName',   'firstNameErr', v => v.length > 0);
-      const v2 = validateField('lastName',    'lastNameErr',  v => v.length > 0);
-      const v3 = validateField('phone',       'phoneErr',     v => /[\d\s\-()+]{7,}/.test(v));
-      const v4 = validateField('email',       'emailErr',     v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
-      const v5 = validateField('practiceArea','practiceErr',  v => v !== '');
-      const v6 = validateField('message',     'messageErr',   v => v.length >= 10);
+      const v1 = validateField('firstName',    'firstNameErr', v => v.length > 0);
+      const v2 = validateField('lastName',     'lastNameErr',  v => v.length > 0);
+      const v3 = validateField('phone',        'phoneErr',     v => /[\d\s\-()+]{7,}/.test(v));
+      const v4 = validateField('email',        'emailErr',     v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v));
+      const v5 = validateField('practiceArea', 'practiceErr',  v => v !== '');
+      const v6 = validateField('message',      'messageErr',   v => v.length >= 10);
 
       if (v1 && v2 && v3 && v4 && v5 && v6) {
         const btn = document.getElementById('formSubmit');
         btn.classList.add('loading');
         btn.textContent = 'Sending…';
 
-        // EmailJS CONFIGURATION
-        const EMAILJS_SERVICE_ID = 'service_y7kd1h2';
+        // ── EMAILJS CONFIGURATION ──
+        const EMAILJS_SERVICE_ID  = 'service_y7kd1h2';
         const EMAILJS_TEMPLATE_ID = 'template_i84j0fp';
-        const EMAILJS_PUBILC_KEY = 'xOzQ7NNXlkqe5mzOz';
+        const EMAILJS_PUBLIC_KEY  = 'xOzQ7NNXlkqe5mzOz';
 
-        // TODO: Replace the URL below with your actual form endpoint (e.g. Formspree, Netlify Forms, or your own API)
-        const formData = {
-          firstName: document.getElementById('firstName').value.trim(),
-          lastName:  document.getElementById('lastName').value.trim(),
-          phone:     document.getElementById('phone').value.trim(),
-          email:     document.getElementById('email').value.trim(),
-          practiceArea: document.getElementById('practiceArea').value,
-          message:   document.getElementById('message').value.trim(),
+        // ── TEMPLATE PARAMS (matches your EmailJS template variables) ──
+        const templateParams = {
+          first_name:    document.getElementById('firstName').value.trim(),
+          last_name:     document.getElementById('lastName').value.trim(),
+          phone:         document.getElementById('phone').value.trim(),
+          email:         document.getElementById('email').value.trim(),
+          practice_area: document.getElementById('practiceArea').value,
+          message:       document.getElementById('message').value.trim(),
         };
 
-       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
           .then(() => {
             btn.style.display = 'none';
             document.getElementById('formSuccess').classList.add('show');
@@ -152,17 +150,16 @@
               if (el) { el.value = ''; delete el.dataset.listenerAttached; }
             });
           })
-          .catch((err) => {
-              console.error('EmailJS error:', err);
+          .catch((error) => {
+            console.error('EmailJS error:', error);
             btn.classList.remove('loading');
             btn.textContent = 'Submit Consultation Request →';
-            alert('Something went wrong. Please try again or contact us directly.');
+            alert('Something went wrong. Please try again or call us directly on 0729 083 553.');
           });
       }
     });
 
-    // ── 8. SMOOTH SCROLL (handled by CSS html { scroll-behavior: smooth }) ──
-    // Keeping anchor click handler only to close mobile menu on nav link click
+    // ── 8. SMOOTH SCROLL ──
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', () => {
         hamburger.classList.remove('open');
