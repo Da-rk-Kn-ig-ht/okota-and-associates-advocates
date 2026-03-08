@@ -143,13 +143,8 @@
           message:   document.getElementById('message').value.trim(),
         };
 
-        fetch('https://YOUR_FORM_ENDPOINT_HERE', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        })
-          .then(res => {
-            if (!res.ok) throw new Error('Submission failed');
+       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+          .then(() => {
             btn.style.display = 'none';
             document.getElementById('formSuccess').classList.add('show');
             ['firstName','lastName','phone','email','practiceArea','message'].forEach(id => {
@@ -157,7 +152,8 @@
               if (el) { el.value = ''; delete el.dataset.listenerAttached; }
             });
           })
-          .catch(() => {
+          .catch((err) => {
+              console.error('EmailJS error:', err);
             btn.classList.remove('loading');
             btn.textContent = 'Submit Consultation Request →';
             alert('Something went wrong. Please try again or contact us directly.');
