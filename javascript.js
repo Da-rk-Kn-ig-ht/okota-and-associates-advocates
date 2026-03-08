@@ -128,6 +128,11 @@
         btn.classList.add('loading');
         btn.textContent = 'Sending…';
 
+        // EmailJS CONFIGURATION
+        const EMAILJS_SERVICE_ID = 'service_y7kd1h2';
+        const EMAILJS_TEMPLATE_ID = 'template_i84j0fp';
+        const EMAILJS_PUBILC_KEY = 'xOzQ7NNXlkqe5mzOz';
+
         // TODO: Replace the URL below with your actual form endpoint (e.g. Formspree, Netlify Forms, or your own API)
         const formData = {
           firstName: document.getElementById('firstName').value.trim(),
