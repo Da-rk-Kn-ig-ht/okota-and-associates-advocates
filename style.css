@@ -215,7 +215,7 @@
 /* ── WHATSAPP FLOATING BUTTON ── */
 .whatsapp-float {
   position: fixed;
-  bottom: 2rem;
+  bottom: 5rem;
   right: 2rem;
   z-index: 999;
   background: #25D366;
@@ -250,7 +250,7 @@
   .whatsapp-float { 
     padding: 0.9rem; 
     border-radius: 50%;
-    bottom: 1.5rem;
+    bottom: 5rem;
     right: 1.5rem;
   }
 }
