@@ -143,7 +143,7 @@ emailjs.init({publicKey: 'xOzQ7NNXlkqe5mzOz'});
           message:       document.getElementById('message').value.trim(),
         };
 
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
           .then(() => {
             btn.style.display = 'none';
             document.getElementById('formSuccess').classList.add('show');
