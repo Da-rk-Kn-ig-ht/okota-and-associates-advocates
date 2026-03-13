@@ -154,7 +154,7 @@
             console.error('EmailJS error:', error);
             btn.classList.remove('loading');
             btn.textContent = 'Submit Consultation Request →';
-            alert('Something went wrong. Please try again or call us directly on 0729 083 553.');
+            alert('Something went wrong. Please try again or call us directly on 0729 082 553.');
           });
       }
     });
