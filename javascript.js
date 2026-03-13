@@ -1,3 +1,4 @@
+emailjs.init('xOzQ7NNXlkqe5mzOz');
 // ── 1. HERO ANIMATIONS ──
     window.addEventListener('load', () => {
       document.querySelector('.hero-eyebrow').classList.add('animate');
