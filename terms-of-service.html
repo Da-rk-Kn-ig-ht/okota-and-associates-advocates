@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms of Use | Okota & Associates Advocates</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0d1b2e;
+      --navy-mid: #162844;
+      --navy-light: #1e3a5f;
+      --gold: #c9a84c;
+      --gold-light: #e2c47a;
+      --gold-pale: #f5e9c8;
+      --cream: #faf7f0;
+      --white: #ffffff;
+      --text: #2c2c2c;
+      --text-light: #6b6b6b;
+      --border: rgba(201,168,76,0.25);
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); }
+
+    nav {
+      background: rgba(13,27,46,0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 8vw;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold-light); letter-spacing: 0.04em; text-decoration: none; }
+    .nav-logo span { color: var(--white); font-weight: 400; }
+    .nav-back { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s; }
+    .nav-back:hover { color: var(--gold-light); }
+    .nav-back::before { content: '←'; }
+
+    .page-banner {
+      background: var(--navy);
+      padding: 5rem 8vw 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 60%);
+    }
+    .page-banner-tag { font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.8rem; }
+    .page-banner-tag::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+    .page-banner h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 3.2rem); color: var(--white); line-height: 1.2; margin-bottom: 1rem; }
+    .page-banner h1 em { font-style: italic; color: var(--gold-light); }
+    .page-banner-meta { font-size: 0.78rem; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-top: 1.5rem; }
+
+    .content-wrap { max-width: 860px; margin: 0 auto; padding: 5rem 8vw; }
+
+    .toc { background: var(--white); border: 1px solid var(--border); padding: 2rem 2.5rem; margin-bottom: 4rem; }
+    .toc-title { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--navy); margin-bottom: 1.2rem; }
+    .toc ol { padding-left: 1.2rem; }
+    .toc li { margin-bottom: 0.5rem; }
+    .toc a { font-size: 0.83rem; color: var(--text-light); text-decoration: none; transition: color 0.2s; }
+    .toc a:hover { color: var(--gold); }
+
+    .policy-section { margin-bottom: 3.5rem; }
+    .policy-section:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    h2 .sec-num { font-family: 'Cormorant Garamond', serif; font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em; font-weight: 400; }
+
+    p { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--text-light); line-height: 1.9; margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    li { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; color: var(--text-light); line-height: 1.9; margin-bottom: 0.4rem; }
+
+    .highlight-box { background: var(--white); border-left: 3px solid var(--gold); padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+    .highlight-box p { font-size: 0.92rem; margin: 0; }
+
+    .warning-box { background: #fff8f0; border-left: 3px solid #c9a84c; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+    .warning-box p { font-size: 0.92rem; margin: 0; color: var(--text); }
+
+    .contact-box { background: var(--navy); padding: 2rem 2.5rem; margin-top: 1.5rem; }
+    .contact-box p { color: rgba(255,255,255,0.6); }
+    .contact-box a { color: var(--gold-light); text-decoration: none; }
+    .contact-box strong { color: var(--white); display: block; margin-bottom: 0.8rem; font-family: 'Playfair Display', serif; font-size: 1rem; }
+
+    .page-footer {
+      background: var(--navy);
+      padding: 2rem 8vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .page-footer span { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .page-footer a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.75rem; transition: color 0.3s; }
+    .page-footer a:hover { color: var(--gold-light); }
+
+    @media (max-width: 640px) {
+      .content-wrap { padding: 3rem 5vw; }
+      nav { padding: 0 5vw; }
+      .page-banner { padding: 4rem 5vw 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Okota <span>& Associates</span></a>
+    <a href="index.html" class="nav-back">Back to Home</a>
+  </nav>
+
+  <div class="page-banner">
+    <div class="page-banner-tag">Legal Documents</div>
+    <h1>Terms of <em>Use</em></h1>
+    <div class="page-banner-meta">Last updated: March 2026 &nbsp;·&nbsp; Effective date: March 2026</div>
+  </div>
+
+  <div class="content-wrap">
+
+    <div class="toc">
+      <div class="toc-title">Table of Contents</div>
+      <ol>
+        <li><a href="#t1">Acceptance of Terms</a></li>
+        <li><a href="#t2">No Attorney-Client Relationship</a></li>
+        <li><a href="#t3">Not Legal Advice</a></li>
+        <li><a href="#t4">Consultation Requests</a></li>
+        <li><a href="#t5">Confidentiality of Enquiries</a></li>
+        <li><a href="#t6">Intellectual Property</a></li>
+        <li><a href="#t7">Accuracy of Information</a></li>
+        <li><a href="#t8">Limitation of Liability</a></li>
+        <li><a href="#t9">Third-Party Links</a></li>
+        <li><a href="#t10">Governing Law</a></li>
+        <li><a href="#t11">Changes to These Terms</a></li>
+        <li><a href="#t12">Contact</a></li>
+      </ol>
+    </div>
+
+    <div class="highlight-box">
+      <p>Please read these Terms of Use carefully before using this website. By accessing or using this website, you agree to be bound by these terms. If you do not agree, please do not use this website.</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="policy-section" id="t1">
+      <h2><span class="sec-num">01 —</span> Acceptance of Terms</h2>
+      <p>These Terms of Use govern your access to and use of the website located at this domain, operated by <strong>Okota & Associates Advocates</strong>, a sole proprietorship law firm registered in Kenya ("the Firm", "I", "me").</p>
+      <p>By using this website — including browsing its pages, submitting the consultation form, or contacting the Firm via WhatsApp — you agree to these Terms of Use in full. These terms apply in addition to any specific engagement agreement entered into if you become a client of the Firm.</p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="policy-section" id="t2">
+      <h2><span class="sec-num">02 —</span> No Attorney-Client Relationship</h2>
+      <div class="warning-box">
+        <p><strong>Important:</strong> Submitting the consultation form, sending a WhatsApp message, or otherwise contacting the Firm through this website does <strong>not</strong> create an attorney-client relationship between you and Okota & Associates Advocates.</p>
+      </div>
+      <p>An attorney-client relationship is only established when:</p>
+      <ul>
+        <li>I have expressly agreed in writing to represent you; and</li>
+        <li>You have signed a formal engagement letter or retainer agreement; and</li>
+        <li>Any agreed fees or deposits have been received where applicable.</li>
+      </ul>
+      <p>Until these conditions are met, I am under no obligation to keep confidential any information you submit, although I will treat it with care as described in Section 5 below.</p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="policy-section" id="t3">
+      <h2><span class="sec-num">03 —</span> Not Legal Advice</h2>
+      <p>The content on this website — including descriptions of practice areas, general legal information, and any materials published — is provided for <strong>general informational purposes only</strong>. It does not constitute legal advice and should not be relied upon as such.</p>
+      <p>Laws change frequently, and the information on this website may not reflect the most current legal developments. Every legal situation is unique. You should not act or refrain from acting on the basis of any content on this website without first seeking advice from a qualified advocate regarding the specific facts of your matter.</p>
+      <p>Reading, downloading, or using any content on this website does not create any duty of care on the part of the Firm toward you.</p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="policy-section" id="t4">
+      <h2><span class="sec-num">04 —</span> Consultation Requests</h2>
+      <p>The consultation request form on this website is provided as a convenience to allow prospective clients to get in touch. Submitting the form does not guarantee that:</p>
+      <ul>
+        <li>I will be available to take on your matter;</li>
+        <li>I have the expertise required for your specific legal issue;</li>
+        <li>A consultation will be provided within any specific timeframe; or</li>
+        <li>Any particular outcome will be achieved in your matter.</li>
+      </ul>
+      <p>I will make reasonable efforts to respond to enquiries within one business day. However, no guarantee is made as to response times.</p>
+      <p>The initial consultation is offered without obligation. Any ongoing legal representation will be subject to a separate written engagement agreement and fee arrangement.</p>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="policy-section" id="t5">
+      <h2><span class="sec-num">05 —</span> Confidentiality of Enquiries</h2>
+      <p>Although no attorney-client relationship exists until the conditions in Section 2 are met, I treat all information submitted through the consultation form with professional discretion. Information submitted will not be shared with third parties except as described in the <a href="privacy-policy.html">Privacy Policy</a> and as required by law.</p>
+      <p>Please note, however, that communications transmitted over the internet — including emails and form submissions — cannot be guaranteed to be fully secure. Exercise caution when including highly sensitive information in online communications.</p>
+      <p>If you have an urgent or particularly sensitive matter, I recommend contacting the Firm directly by telephone: <strong>0729 082 553</strong>.</p>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="policy-section" id="t6">
+      <h2><span class="sec-num">06 —</span> Intellectual Property</h2>
+      <p>All content on this website — including text, layout, design, graphics, logos, and the OA monogram — is the property of Okota & Associates Advocates and is protected under Kenyan intellectual property law.</p>
+      <p>You may not reproduce, distribute, modify, create derivative works from, or use any content from this website for commercial purposes without prior written permission from the Firm.</p>
+      <p>You may share links to this website and print or download content for your own personal, non-commercial reference.</p>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="policy-section" id="t7">
+      <h2><span class="sec-num">07 —</span> Accuracy of Information</h2>
+      <p>I endeavour to ensure that information on this website is accurate and up to date. However, I make no warranties or representations — express or implied — as to the accuracy, completeness, or fitness for purpose of any content on this website.</p>
+      <p>The Firm's practice areas, office hours, contact details, and other information are subject to change. Always confirm current details by contacting the Firm directly before acting on information found on this website.</p>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="policy-section" id="t8">
+      <h2><span class="sec-num">08 —</span> Limitation of Liability</h2>
+      <p>To the fullest extent permitted by Kenyan law, Okota & Associates Advocates shall not be liable for any loss or damage — whether direct, indirect, incidental, or consequential — arising from:</p>
+      <ul>
+        <li>Your use of, or inability to use, this website;</li>
+        <li>Reliance on any information contained on this website;</li>
+        <li>Unauthorised access to or alteration of your transmissions or data;</li>
+        <li>Any interruption, suspension, or termination of this website; or</li>
+        <li>Any errors, omissions, or inaccuracies in the content of this website.</li>
+      </ul>
+      <p>This limitation does not exclude or restrict liability where such exclusion or restriction is prohibited by the Advocates Act (Cap. 16) or applicable consumer protection laws.</p>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="policy-section" id="t9">
+      <h2><span class="sec-num">09 —</span> Third-Party Links & Services</h2>
+      <p>This website may contain links to third-party websites or integrate third-party services (including WhatsApp and EmailJS). These are provided for convenience only. I have no control over the content, privacy practices, or availability of third-party platforms and accept no responsibility for them.</p>
+      <p>Accessing any third-party website or service from this website is at your own risk and subject to that third party's own terms and privacy policies.</p>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="policy-section" id="t10">
+      <h2><span class="sec-num">10 —</span> Governing Law & Jurisdiction</h2>
+      <p>These Terms of Use are governed by and construed in accordance with the laws of the Republic of Kenya. Any disputes arising out of or in connection with these terms or your use of this website shall be subject to the exclusive jurisdiction of the courts of Kenya.</p>
+      <p>If any provision of these Terms of Use is found to be invalid or unenforceable under applicable law, the remaining provisions shall continue in full force and effect.</p>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="policy-section" id="t11">
+      <h2><span class="sec-num">11 —</span> Changes to These Terms</h2>
+      <p>I reserve the right to update or modify these Terms of Use at any time. Changes will be effective immediately upon posting on this website. The "Last updated" date at the top of this page reflects the most recent revision.</p>
+      <p>Your continued use of this website after any changes constitutes your acceptance of the revised terms. It is your responsibility to review these terms periodically.</p>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="policy-section" id="t12">
+      <h2><span class="sec-num">12 —</span> Contact</h2>
+      <p>If you have any questions about these Terms of Use, please contact:</p>
+      <div class="contact-box">
+        <strong>Okota & Associates Advocates</strong>
+        <p>Wazo Building, 1st Floor, Suna Migori, Kenya</p>
+        <p>Email: <a href="mailto:okotalaw@yahoo.com">okotalaw@yahoo.com</a></p>
+        <p>Phone: <a href="tel:+254729082553">0729 082 553</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="page-footer">
+    <span>&copy; 2026 Okota &amp; Associates Advocates. All rights reserved.</span>
+    <div style="display:flex;gap:1.5rem;">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-of-service.html">Terms of Use</a>
+      <a href="index.html">Home</a>
+    </div>
+  </footer>
+
+</body>
+</html>
