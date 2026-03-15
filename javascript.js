@@ -161,14 +161,14 @@ emailjs.init({publicKey: 'xOzQ7NNXlkqe5mzOz'});
       }
     });
 
-    // ── 8. SMOOTH SCROLL ──
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+   // ── 8. SMOOTH SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
 
 // ── 9. CLEAN URL AFTER ANCHOR SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(link => {
