@@ -169,3 +169,15 @@ emailjs.init({publicKey: 'xOzQ7NNXlkqe5mzOz'});
         document.body.style.overflow = '';
       });
     });
+
+// ── 9. CLEAN URL AFTER ANCHOR SCROLL ──
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+      history.replaceState(null, '', window.location.pathname);
+    }
+  });
+});
